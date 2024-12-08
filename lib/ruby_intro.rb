@@ -3,11 +3,31 @@
 # Part 1
 
 def sum(arr)
-  # YOUR CODE HERE
+  # takes an array of integers as an argument 
+  # and returns the sum of its elements
+  sum = 0
+  if arr 
+    arr.each{|x| sum += x}
+    sum
+  else
+    sum
+  end
 end
 
 def max_2_sum(arr)
-  # YOUR CODE HERE
+  # takes an array of integers as an argument 
+  # and returns the sum of its two largest elements
+  sum = 0
+  if not arr.empty?
+    if arr.length == 1
+      return arr[0]
+    end
+    sort_arr = arr.sort
+    n = sort_arr.length - 1
+    sum = sort_arr[n] + sort_arr[n-1]
+    return sum
+  end
+  return sum
 end
 
 def sum_to_n?(arr, n)
