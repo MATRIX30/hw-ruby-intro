@@ -31,17 +31,33 @@ def max_2_sum(arr)
 end
 
 def sum_to_n?(arr, n)
-  # YOUR CODE HERE
+  # takes an array of integers and an additional
+  # integer, n, as arguments and returns true if
+  # any two elements in the array of integers sum to n.
+  if arr.length == 1
+    return false
+  end 
+  arr.each do |number|
+    remainder = n - number
+    if arr.include?(remainder) && remainder != number
+      return true
+    end 
+  end
+  false
 end
 
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
+  # takes a string representing a name and returns
+  # the string "Hello, " concatenated with the name
+  return "Hello, #{name}"
 end
 
 def starts_with_consonant?(s)
-  # YOUR CODE HERE
+  # takes a string and returns true if it starts with
+  # a consonant and false otherwise.
+  if s.isSt
 end
 
 def binary_multiple_of_4?(s)
